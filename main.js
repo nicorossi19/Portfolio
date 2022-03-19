@@ -17,17 +17,17 @@ const technologies = [
     {
         id: 3,
         name: 'JavaScript',
-        src: "./img/JS.png"
+        src: "./img/js.png"
     },
     {
         id: 4,
         name: 'BootStrap',
-        src: "./img/BS.png"
+        src: "./img/bs.png"
     },
     {
         id: 5,
         name: 'Sass',
-        src: "./img/Sass.png"
+        src: "./img/sass.png"
     },
     {
         id: 6,
@@ -55,6 +55,8 @@ window.addEventListener("scroll", () => {
     navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
+
+// Recorrido del array 'technologies'
 technologies.forEach(el => {
     const $div2 = document.createElement('div');
     $div2.classList.add('containerIcon');
