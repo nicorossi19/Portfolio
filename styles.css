@@ -1,0 +1,345 @@
+/* -------------- General -------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bclr: linear-gradient(to bottom, #1d1d1d, #000000);
+    --sbclr: #414141;
+    --mclr: #be1d1d;
+    --sclr: #ddda1e;
+    --thclr: #1f92c7;
+    --tclr: #fff;
+    --hclr: rgba(255, 255, 255, 0.1);
+    --pad: 30px 70px;
+    --tpad: 100px 70px;
+}
+
+
+body {
+    background-image: var(--bclr)
+}
+
+body::-webkit-scrollbar {
+    /* display: none; */
+    width: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--mclr);
+    border-radius: 20px;
+}
+
+a {
+    color: var(--tclr);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--mclr);
+}
+
+p {
+    color: var(--tclr);
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: var(--tclr);
+    font-weight: 400;
+}
+
+span {
+    font-weight: 600;
+}
+
+/* -------------- Header -------------- */
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: var(--pad);
+    z-index: 100000;
+}
+
+.navbar.sticky {
+    padding: 5px 70px;
+    background-color: var(--mclr);
+}
+
+
+.navbar a {
+    display: flex;
+}
+
+.logoAndPortfolio {
+    width: 15%;
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    height: 4em;
+    transition: 0.6s;
+}
+
+.navbar.sticky .logo {
+    content: url(./img/logo_blanco.png);
+    height: 3em;
+}
+
+.portfolioTitle {
+    position: absolute;
+    margin-left: 0px;
+    opacity: 0;
+
+}
+
+.navbar.sticky .portfolioTitle {
+    position: absolute;
+    margin-left: 60px;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-size: 1.1em;
+    color: var(--tclr);
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: 1s;
+    opacity: 1;
+}
+
+.list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list li {
+    position: relative;
+    list-style: none;
+}
+
+.list .linksMenu {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: var(--mclr);
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.6s;
+}
+
+.navbar.sticky .linksMenu {
+    color: var(--tclr);
+}
+
+/* -------------- Main -------------- */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.containerTitle {
+    position: relative;
+    display: flex;
+    padding: var(--tpad);
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: var(--tclr);
+}
+
+/* --------- Section I - "Inicio" --------- */
+
+
+#home .content {
+    padding-left: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .info {
+    list-style: none;
+}
+
+.info a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--tclr);
+    font-size: 5em;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.info a:hover {
+    color: var(--hclr);
+}
+
+.info a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.35em;
+    color: var(--mclr);
+    text-shadow:
+        0 0 10px var(--mclr),
+        0 0 30px var(--mclr),
+        0 0 80px var(--mclr);
+    font-weight: 500;
+    letter-spacing: 40px;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.info a:hover:before {
+    opacity: 1;
+    letter-spacing: 6px;
+}
+
+/* --------- Section II - "Sobre mi" --------- */
+
+#aboutMe {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#containerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#myPersonalInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    height: 400px;
+    border-radius: 10px;
+    border: 3px solid var(--mclr);
+    transition: 0.3s;
+}
+
+.img:hover {
+    border: 3px solid var(--tclr);
+}
+
+.profile {
+    width: 30vw;
+    text-align: justify;
+}
+
+.buttonCV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mclr);
+    margin-top: 30px;
+    border-radius: 30px;
+    height: 2em;
+    width: 10em;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.buttonCV:hover{
+    background-color: var(--tclr);
+    color: var(--mclr);
+}
+
+#technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.imgs {
+    /* background-color: red;
+    height: 20px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 45px;
+}
+
+.containerIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.containerIcon:hover {
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.tech {
+    height: 75px;
+}
+
+.subtitle {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    padding-top: 110px;
+    width: 100px;
+    transition: 0.2s;
+}
+
+.subtitle:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* --------- Section III - "Experiencia" --------- */
+
+/* --------- Section IV - "Contacto" --------- */
+
+#contact {
+    height: 100vh;
+}
+
+#containerContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

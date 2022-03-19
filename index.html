@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/Favicon.png" type="image/x-icon">
+
+    <!-- AOS animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>NR Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logoAndPortfolio">
+                <a href="#"><img class="logo" src="./img/logo_rojo.png" alt="NR"></a>
+                <a class="portfolioTitle" href="#">portfolio</a>
+            </div>
+            <ul class="list">
+                <li><a class="linksMenu" href="#aboutMe">Sobre mi</a></li>
+                <li><a class="linksMenu" href="#experience">Experiencia</a></li>
+                <li><a class="linksMenu" href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" id="home">
+            <ul class="content">
+                <li class="info"><a href="#aboutMe" data-text="Sobre mi">Sobre mi</a></li>
+                <li class="info"><a href="#experience" data-text="Experiencia">Experiencia</a></li>
+                <li class="info"><a href="#contact" data-text="Contacto">Contacto</a></li>
+            </ul>
+        </div>
+        
+        <!-- Sobre mi -->
+        <div id="aboutMe">
+            <div class="containerTitle">
+                <h2 class="title" data-aos="fade-up" data-aos-duration="1000">< sobre mi ></h2>
+            </div>
+            <div id="containerInfo" data-aos="fade-up" data-aos-duration="1500">
+                <img class="img" src="./img/img_mia2.jpg" alt="">
+                <div id="myPersonalInfo">
+                    <div class="profile">
+                        <p>Soy de Buenos Aires, Argentina. <br><br>Antes de sumergirme el mundo del desarrollo y programación estudié <span>Realización Integral de Cine y TV <a href="https://www.cic.edu.ar/" target="_blank">(CIC)</a></span> y, tras finalizar, realicé un <span>máster en guión cinematográfico y de TV en Barcelona <a href="https://escac.com/" target="_blank">(ESCAC)</a></span>. <br><br>Me considero una persona curiosa y con facilidad para aprender. Desde los trece años que practico con Photoshop y aprendí lo que sé de fotografía tanto por mi cuenta como a través de la universidad <span><a href="https://www.instagram.com/soynicorossi/" target="_blank">(instagram - SoyNicoRossi)</a></span>.</p>
+                    </div>
+                    <h3 class="name"><span>Nombre: </span>Nicolás Rossi</h3>
+                    <h3 class="birthday"><span>Fecha de nacimiento: </span>19/07/1995</h3>
+                    <a class="buttonCV button" href="./pdf/CV-Nicolas-Rossi.pdf" download="CV-Nicolas-Rossi">Descarga mi CV</a>
+                </div>
+            </div>
+            <div id="technologies" data-aos="fade-up" data-aos-duration="1500">
+                <h2>Tecnologías</h2>
+            </div>
+        </div>
+
+        <!-- Experciencia -->
+        <div class="containerTitle" id="experience">
+            <h2 class="title" data-aos="fade-up" data-aos-duration="1000">< experiencia ></h2>
+        </div>
+
+        <!-- Contacto -->
+        <!-- <div id="contact">
+            <div class="containerTitle">
+                <h2 class="title" data-aos="fade-up" data-aos-duration="1000">< contacto ></h2>
+            </div>
+            <div id="containerContact" data-aos="fade-up" data-aos-duration="1500">
+                <img class="img" src="./img/img_mia.jpg" alt="">
+            </div>
+        </div> -->
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
