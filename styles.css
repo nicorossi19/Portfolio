@@ -22,11 +22,10 @@
 
 
 body {
-    background-image: var(--bclr)
+    background-image: var(--bclr);
 }
 
 body::-webkit-scrollbar {
-    /* display: none; */
     width: 3px;
 }
 
@@ -59,7 +58,6 @@ span {
 }
 
 /* -------------- Header -------------- */
-
 
 .navbar {
     position: fixed;
@@ -258,6 +256,8 @@ span {
 }
 
 .profile {
+    display: flex;
+    flex-wrap: wrap;
     width: 30vw;
     text-align: justify;
 }
@@ -342,4 +342,246 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* --------- Media Queries --------- */
+
+@media (max-width: 576px) and (min-width: 400px) {
+
+    /* -------------- Header -------------- */
+
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .navbar.sticky {
+        padding: 5px 10px;
+    }
+
+    .logoAndPortfolio {
+        width: 0;
+    }
+
+    .logo {
+        height: 3em;
+    }
+
+    .navbar.sticky .portfolioTitle {
+        display: none;
+    }
+
+    .list .linksMenu {
+        margin: 0 10px;
+        font-size: 0.8em;
+    }
+
+    /* -------------- Main -------------- */
+
+    .containerTitle {
+        padding: 80px 10px;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    /* --------- Section I - "Inicio" --------- */
+
+    .info a {
+        font-size: 3em;
+    }
+
+    /* --------- Section II - "Sobre mi" --------- */
+
+    #containerInfo {
+        flex-direction: column;
+    }
+
+    .img {
+        height: 380px;
+        border-radius: 10px;
+        border: 1px solid var(--mclr);
+    }
+
+    .img:hover {
+        border: 1px solid var(--tclr);
+    }
+
+    .profile {
+        width: 80vw;
+    }
+
+    .profile p {
+        font-size: 15px;
+    }
+
+    .name,
+    .birthday {
+        font-size: 16px;
+    }
+
+    #technologies {
+        margin-top: 70px;
+    }
+
+    .imgs {
+        width: 85%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .tech {
+        height: 50px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    /* --------- Section III - "Experiencia" --------- */
+
+    /* --------- Section IV - "Contacto" --------- */
+
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+    /* -------------- Header -------------- */
+
+    .navbar {
+        padding: 5px 10px
+    }
+
+    .navbar.sticky {
+        padding: 5px 10px;
+    }
+
+    .logo {
+        height: 3em;
+    }
+
+    .navbar.sticky .portfolioTitle {
+        font-size: 0.8em;
+    }
+
+    .list .linksMenu {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    /* -------------- Main -------------- */
+
+    .title {
+        font-size: 1.3em;
+    }
+
+    /* --------- Section I - "Inicio" --------- */
+
+    .info a {
+        font-size: 4em;
+    }
+
+    /* --------- Section II - "Sobre mi" --------- */
+
+    .containerTitle {
+        padding: 100px 10px;
+    }
+
+    #containerInfo {
+        flex-direction: column;
+    }
+
+    .img {
+        height: 500px;
+        border: 2px solid var(--mclr);
+    }
+
+    .img:hover {
+        border: 2px solid var(--tclr);
+    }
+
+    .profile {
+        width: 80vw;
+    }
+
+    .name,
+    .birthday {
+        font-size: 18px;
+    }
+
+    #technologies {
+        margin-top: 70px;
+    }
+
+    .imgs {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .tech {
+        height: 60px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    
+    /* --------- Section II - "Sobre mi" --------- */
+
+    .containerTitle {
+        padding: 100px 70px;
+    }
+
+    #containerInfo {
+        flex-wrap: wrap;
+    }
+
+    .img {
+        height: 450px;
+        border: 3px solid var(--mclr);
+    }
+
+    .img:hover {
+        border: 3px solid var(--tclr);
+    }
+
+    .profile {
+        width: 60vw;
+    }
+
+    #technologies {
+        margin-top: 50px;
+    }
+
+    .imgs {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .tech {
+        height: 60px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+
+    /* --------- Section II - "Sobre mi" --------- */
+
+    .img {
+        height: 500px;
+        border: 3px solid var(--mclr);
+    }
+
+    .img:hover {
+        border: 3px solid var(--tclr);
+    }
 }
